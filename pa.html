@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PYTHON -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            background-color: #8C5A3C;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        nav{
+            background-color: #4B2E2B;
+        }
+
+        a{
+            color: #FFF8F0;
+            text-decoration: none;
+        }
+
+        .nav-link:hover{
+            color: #8C5A3C;
+        }
+
+        .nav-link{
+            color: #FFF8F0;
+        }
+
+        footer{
+            background-color: #4B2E2B;
+            color: #FFF8F0;
+            padding: 10px;
+        }
+
+        /* PA CSS */
+        .history-section{
+            flex: 1;
+            background-color: #1f1a17;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px);
+            background-size: 28px 28px;
+            padding: 90px 16px;
+        }
+
+        .archive-card{
+            max-width: 560px;
+            margin: 0 auto;
+            background-color: #f6efe2;
+            color: #241b15;
+            border: 1px solid #c5b08a;
+            border-top: 5px solid #8b2635;
+            border-radius: 10px;
+            padding: 36px 32px;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .archive-card h1{
+            font-family: 'Cinzel', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: #241b15;
+            margin: 0 0 20px 0 !important;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #d4c3a3;
+            letter-spacing: 0.4px;
+        }
+
+        .archive-card form{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .archive-card input[type="text"]{
+            background-color: #fffdf9;
+            border: 1.5px solid #b8a27c;
+            border-radius: 6px;
+            padding: 11px 14px;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            color: #1f1712;
+            width: 100%;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .archive-card input[type="text"]::placeholder{
+            color: #87765c;
+            font-style: italic;
+        }
+
+        .archive-card input[type="text"]:focus{
+            outline: none;
+            border-color: #8b2635;
+            box-shadow: 0 0 0 3px rgba(139, 38, 53, 0.16);
+        }
+
+        .archive-card input[type="button"]{
+            margin-top: 6px;
+            background-color: #8b2635;
+            color: #fdf8ee;
+            border: 1px solid #691b27;
+            border-radius: 6px;
+            padding: 11px 18px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s ease;
+        }
+
+        .archive-card input[type="button"]:hover{
+            background-color: #6e1c28;
+        }
+
+        .archive-card #output{
+            margin-top: 22px;
+            background-color: #ede2ce;
+            border: 1px solid #c7b28e;
+            border-left: 4px solid #9e7b2f;
+            border-radius: 6px;
+            padding: 16px;
+            min-height: 180px;
+            font-family: 'Lora', serif;
+            font-size: 1.15rem;
+            color: #241b15;
+            line-height: 1.55;
+        }
+
+        .archive-card #output:empty::before{
+            content: "New club member will appear here...";
+            color: #7c6b52;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+    </style>
+
+    <title>Q2 Project: Student Showcase 2026</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a href="#"><h4>Student Showcase</h4></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><h4>SW 1</h4></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skillstest.html"><h4>Skills Test</h4></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pa.html"><h4>PA 2</h4></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html"><h4>Project</h4></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PARTICIPATION ACTIVITY -->
+    <main class="history-section">
+        <div class="archive-card">
+            <form>
+                <h1 class="mt-2">Add new Social Studies Club member:</h1>
+                <input type="text" id="fname" placeholder="Enter your first name">
+                <input type="text" id="lname" placeholder="Enter your last name">
+                <input type="button" py-click="add_name" value="Submit">
+            </form>
+
+            <div id="output"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">Student Showcase &mdash; 2nd Quarter Project</p>
+        </div>
+    </footer>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>

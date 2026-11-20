@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PYTHON -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            background-color: #8C5A3C;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        nav{
+            background-color: #4B2E2B;
+        }
+
+        a{
+            color: #FFF8F0;
+            text-decoration: none;
+        }
+
+        .nav-link:hover{
+            color: #8C5A3C;
+        }
+
+        .nav-link{
+            color: #FFF8F0;
+        }
+
+        footer{
+            background-color: #4B2E2B;
+            color: #FFF8F0;
+            padding: 10px;
+        }
+
+        /* PROJECT CSS */
+        .creator-part{
+            flex: 1;
+            background-color: #f7e6e4;
+            padding: 52px 18px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #3b231b;
+        }
+
+        .creator-wrap{
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .creator-header{
+            background-color: #fffaf7;
+            border: 1px solid #e3c2ba;
+            border-left: 6px solid #c96480;
+            border-radius: 14px;
+            padding: 28px 30px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 22px rgba(75, 46, 43, 0.08);
+        }
+
+        .creator-header h1{
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4b2e2b;
+            margin: 0 0 8px 0;
+        }
+
+        .creator-header p{
+            margin: 0;
+            color: #6e473b;
+            font-size: 1rem;
+        }
+
+        .info-list{
+            background-color: #fffaf7;
+            border: 1px solid #e3c2ba;
+            border-radius: 14px;
+            padding: 12px 26px;
+            box-shadow: 0 8px 22px rgba(75, 46, 43, 0.08);
+        }
+
+        .info-row{
+            display: grid;
+            grid-template-columns: 210px 1fr;
+            gap: 14px;
+            padding: 15px 0;
+            border-bottom: 1px dashed #e5c9c2;
+            align-items: baseline;
+        }
+
+        .info-row:last-child{
+            border-bottom: none;
+        }
+
+        .info-label{
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #9e4762;
+        }
+
+        .info-value{
+            color: #3b231b;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+
+    <title>Q2 Project: Student Showcase 2026</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a href="#"><h4>Student Showcase</h4></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><h4>SW 1</h4></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skillstest.html"><h4>Skills Test</h4></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pa.html"><h4>PA 2</h4></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html"><h4>Project</h4></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PROJECT -->
+    <main class="creator-part">
+        <div class="creator-wrap">
+            <div class="creator-header">
+                <h1>Meet the Creator!</h1>
+                <p>A quick glimpse to get to know me better</p>
+            </div>
+
+            <div class="info-list">
+                <div class="info-row">
+                    <span class="info-label">Name</span>
+                    <span class="info-value">Shiloh Jakobe Briones</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Hobbies</span>
+                    <span class="info-value">Reading, Watching Movies, Writing, Traveling</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Dream Countries</span>
+                    <span class="info-value">Egypt, Greece, Austria</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Favorite Color</span>
+                    <span class="info-value">Pink & Brown</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Favorite Books</span>
+                    <span class="info-value">The Catcher in the Rye (1951), Pride and Prejudice (1813), The Hunger Games (2008)</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Favorite Movies</span>
+                    <span class="info-value">Little Women (2019), Before Sunrise (1995), City of God (2002), Monsters University (2013)</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Favorite Artists</span>
+                    <span class="info-value">Mazzy Star, Leonard Cohen, Cocteau Twins, Fleetwood Mac</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">Student Showcase &mdash; 2nd Quarter Project</p>
+        </div>
+    </footer>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
